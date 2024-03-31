@@ -1,0 +1,18 @@
+
+<svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        fill: #00cc14;
+    }
+}
+</style>
+
+<path d="M0 12.25V0H1.75V1.75H5.25V3.5H8.75V5.25H12.25V7H8.75V8.75H5.25V10.5H1.75V12.25H0Z" fill="#000" opacity="0.6"/>
+<path d="M0 12.25V0H1.75V1.75H5.25V3.5H8.75V5.25H12.25V7H8.75V8.75H5.25V10.5H1.75V12.25H0Z" fill="#00cc14" opacity="0.6"/>
+</svg>
+
+
+

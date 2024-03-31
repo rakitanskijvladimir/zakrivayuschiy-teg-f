@@ -1,1 +1,29 @@
-/* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */
+/* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */   
+/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); */
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Press Start 2P';
+    src:
+      local('Press Start 2P'),
+      url('./PressStart2P-Regular.woff') format('woff2 supports variations'),
+          url('./PressStart2P-Regular.woff') format('woff2-variations');
+      font-weight: 100 400;
+      font-stretch: 100% 400%;
+  }
+  
+  
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    src:
+      local('Inter'),
+      url('./Inter-Variable.woff2') format('woff2 supports variations'),
+          url('./Inter-Variable.woff2') format('woff2-variations'); 
+          font-weight: 100 400;
+          font-stretch: 100% 400%;
+   } 

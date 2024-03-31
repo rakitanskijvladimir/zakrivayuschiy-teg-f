@@ -4,3 +4,86 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-light {
+  --fone-gradient: repeating-linear-gradient(
+      90deg,
+      #fff 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #fff 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #e7e7e7, #1a1a1a 10.7%, #fff 10.7%);
+  --back-color: #ffffff;
+  --font-color: #000000;
+  --border: #000000;
+  --font-text-header-footer: "Press Start 2P";
+  --font-text-content: "Inter";
+  --heart: url('../svg/whitetored/initial.svg');
+  --disk: #000000;
+  --popover-font: #000000;
+  --popover-fone: #ffffff;
+  
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --fone-gradient: repeating-linear-gradient(
+        90deg,
+        #fff 0px 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #fff 0px 2px, transparent 2px 4px),
+      linear-gradient(180deg, #e7e7e7, #1a1a1a 10.7%, #fff 10.7%);
+    --back-color: #ffffff;
+    --font-color: #000000;
+    --border: #000000;
+    --font-text-header-footer: "Press Start 2P";
+    --font-text-content: "Inter";
+    --heart: url('../svg/whitetored/initial.svg');
+    --disk: #000000;
+    --popover-font: #000000;
+    --popover-fone: #ffffff;
+    
+  }
+}
+
+:root.theme-dark {
+  --fone-gradient: repeating-linear-gradient(
+      90deg,
+      #000 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #007f0c 10.7%, #000 10.7%);
+  --back-color: #000000;
+  --font-color: #00cc14;
+  --border: #00cc14;
+  --font-text-header-footer: "Press Start 2P";
+  --font-text-content: "Inter";
+  --heart: url('../svg/whitetored/greenheart.svg');
+  --disk: #00cc14;
+  --popover-font: #00cc14;
+  --popover-fone: #000000;
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fone-gradient: repeating-linear-gradient(
+        90deg,
+        #000 0px 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
+      linear-gradient(180deg, #007f0c 10.7%, #000 10.7%);
+    --back-color: #000000;
+    --font-color: #00cc14;
+    --border: #00cc14;
+    --font-text-header-footer: "Press Start 2P";
+    --font-text-content: "Inter";
+    --heart: url('../svg/whitetored/greenheart.svg');
+    --disk: #00cc14;
+    --popover-font: #00cc14;
+    --popover-fone: #000000;
+  }
+}
+
