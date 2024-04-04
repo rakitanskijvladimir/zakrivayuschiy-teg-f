@@ -14,97 +14,81 @@
 */
 
 .like-icon {
-  height: 36px; /*высота спрайта (высота одного кадра)*/
+  height: 34px; /*высота спрайта (высота одного кадра)*/
   width: 39px; /*ширина спрайта (ширина одного кадра)*/
-  background: var(--heart); /*картинка со спрайтами с позицией в верхнем левом углу (0px 0px)*/
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .is-liked {
-  height: 36px; /*высота спрайта (высота одного кадра)*/
+  height: 34px; /*высота спрайта (высота одного кадра)*/
   width: 39px; /*ширина спрайта (ширина одного кадра)*/
   background-repeat: no-repeat;
-  animation: slide 0.8s ease-in forwards; /* Добавляем forwards для сохранения последнего кадра */
 }
 
-.theme-menu__button:disabled::before {
-  animation: play 0.5s infinite ease-in-out;
-}
 
 .like-icon .core,
 .like-icon .main-body,
-.like-icon .contour {
-  fill: transparent; /* Начальный цвет для сердцевины, основного тела и контура */
+.like-icon {
+  fill: transparent; 
 }
 
+
+/*При hover*/
+
+.like-icon .core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon:hover .core {
+  fill: #000000;
+  transition: fill 0.3s linear;
+}
+
+.like-icon .main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: #000000; 
+  transition: fill 0.3s linear 0.05s; 
+}
+
+/*При удержании*/
+.like-icon:active .core {
+  fill: #FF0000; 
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: #FF0000; 
+  transition: fill 0.3s linear 0.05s; 
+}
+
+/* При клике */
+
 .like-icon.is-liked .core {
-  fill: #ff0000; /* Красный цвет для сердцевины */
-  animation: fillCore 0.3s forwards;
+  fill: #FF0000; 
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  fill: #ff0000; /* Красный цвет для основного тела */
-  animation: fillMainBody 0.3s ease-in-out 0.1s forwards; /* Задержка 0.1s */
+  fill: #FF0000; 
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon .contour {
+  fill: var(--font-color); 
+  transition: fill 0.1s linear;
 }
 
 .like-icon.is-liked .contour {
-  animation: fillContour 0.3s ease-in-out 0.06s forwards; /* Задержка 0.06s */
+  fill: #FF0000; 
+  transition: fill 0.3s linear 0.06s;
 }
+
 
 .like-icon.is-liked .heart {
-  animation: scaleHeart 0.3s ease-in-out 0.1s forwards; /* Задержка 0.1s */
+  animation: scaleHeart 0.3s ease-in 0.1s; 
   transform-origin: center;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparkAnimation 0.3s ease-in-out 0.3s forwards; /* Задержка 0.3s */
-}
-
-.like-icon:active .core,
-.like-icon:active .main-body {
-  fill: #ff0000; /* Красный цвет для сердцевины и основного тела при нажатии */
-}
-
-@keyframes play {
-  0% {
-    inset-inline-start: -15px;
-  }
-
-  50% {
-    inset-inline-start: -19px;
-  }
-
-  100% {
-    inset-inline-start: -15px;
-  }
-}
-
-@keyframes fillCore {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #ff0000; /* Красный цвет для сердцевины */
-  }
-}
-
-@keyframes fillMainBody {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #ff0000; /* Красный цвет для основного тела */
-  }
-}
-
-@keyframes fillContour {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #ff0000; /* Красный цвет для контура */
-  }
 }
 
 @keyframes scaleHeart {
@@ -119,6 +103,11 @@
   }
 }
 
+
+.like-icon.is-liked .sparks {
+  animation: sparkAnimation 0.3s ease-in 0.3s;
+}
+
 @keyframes sparkAnimation {
   0%,
   100% {
@@ -129,29 +118,4 @@
   }
 }
 
-/*При hover*/
-.like-icon:hover .core {
-  fill: black; /* Красный цвет для сердцевины */
-  transition: fill 0.3s linear; /* Плавное изменение цвета за 0.3 секунды */
-}
 
-.like-icon:hover .main-body {
-  fill: black; /* Красный цвет для основного тела */
-  transition: fill 0.3s linear 0.05s; /* Плавное изменение цвета за 0.3 секунды с задержкой 0.05 секунды */
-}
-
-.like-icon:hover .contour {
-  fill: black; /* Красный цвет для контура */
-  transition: fill 0.3s linear 0.1s; /* Плавное изменение цвета за 0.3 секунды с задержкой 0.1 секунды */
-}
-
-/*При задержании*/
-.like-icon .core,
-.like-icon .main-body {
-  transition: fill 0.3s ease-in-out; /* настройки transition для изменения цвета */
-}
-
-.like-icon:active .core,
-.like-icon:active .main-body {
-  fill: #ff0000; /* красный цвет для сердцевины и основного тела при нажатии */
-}

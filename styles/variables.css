@@ -1,85 +1,56 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-@media (max-width: 375px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 15vh auto 0 auto;
-    padding: 18vh 0 2.1vh 0;
-    max-width: 700px;
-  }
+:root.theme-light {
+  --fone-gradient: repeating-linear-gradient(
+      90deg,
+      #fff 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #fff 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #e7e7e7, #1a1a1a, #fff);
+  --reserv-color: #ffffff;
+  --back-color: #ffffff;
+  --font-color: #000000;
+  --border: #000000;
+  --button-text:#ffffff;
+  --font-text: "Press Start 2P";
+  --font-text-content: "Inter";
+  --font-width: 400;
+  --heart: url("../svg/whitetored/initial.svg");
+  --disk: #000000;
+  --popover-font: #000000;
+  --popover-fone: #ffffff;
+}
 
-  .header .ahead {
-    margin-bottom: 3vh;
-  }
+:root.theme-dark {
+  --fone-gradient: repeating-linear-gradient(
+      90deg,
+      #000 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
+    linear-gradient(180deg, #007f0c, #000);
+  --reserv-color: #000000;
+  --back-color: #000000;
+  --font-color: #00cc14;
+  --border: #00cc14;
+  --button-text:#00cc14;;
+  --font-text: "Press Start 2P";
+  --font-text-content: "Inter";
+  --font-width: 785;
+  --heart: url("../svg/whitetored/greenheart.svg");
+  --disk: #00cc14;
+  --popover-font: #00cc14;
+  --popover-fone: #000000;
+}
 
-  .header__theme-menu {
-    margin-top: 3.9vh;
-    margin-bottom: 2vh;
-  }
-
-  .theme-menu__list {
-    display: grid;
-    gap: 2vh;
-    margin-left: 5vw;
-  }
-
-  .content {
-    display: flex;
-    gap: 7vh;
-    padding-top: 14.5vh;
-  }
-
-  .subheader {
-    margin-left: 2.7vw;
-    padding: 0.8vh 0;
-    max-width: 84%;
-  }
-
-  .wrapper {
-    position: relative;
-  }
-
+@supports (
+  text-shadow: -1px 0 var(--back-color),
+  0 1px var(--back-color),
+  1px 0 var(--back-color),
+  0 -1px var(--back-color)
+) {
   .label {
-    position: absolute;
-    top: 3.7vh;
-    right: 2.5vw;
+    text-shadow: -1px 0 var(--back-color), 0 1px var(--back-color),
+      1px 0 var(--back-color), 0 -1px var(--back-color);
   }
-
-  .item {
-    display: flex;
-    flex-direction: column;
-    gap: 4vh;
-  }
-
-  .event {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    gap: 6px;
-    padding-top: 4vh;
-  }
-
-  .footer {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2vh;
-    margin: 7vh 9vw;
-    width: 309px;
-    height: 85px;
-  }
-
-  .footer__button-text {
-    font-size: 14px;
-    padding: 1vh 0 2vh 0;
-  }
-
-  .disk {
-    position: relative;
-    left: 0;
-    width: 30px;
-    height: 30px;
-  }
-
 }
