@@ -13,11 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-@supports (font-variation-settings: normal) {
-  .page {
-    font-family: var(--font-text), sans-serif;
-  }
-}
 
 .page {
   min-inline-size: 320px;
@@ -142,7 +137,7 @@
 
 .subheader {
   font-family: var(--font-text-content), sans-serif;
-  /* font-variation-settings: "wght" var(--font-width); */
+  font-variation-settings: "wght" 785;
   font-size: 18px;
   max-width: 67%;
   padding: 6px 5px 6px 8px;
@@ -228,13 +223,7 @@
 
 .sparks {
   opacity: 0;
-} 
-
-
-
-
-
-
+}
 
 .card__icon-button:focus {
   border: none;
@@ -244,15 +233,6 @@
   outline: 2px solid var(--font-color);
   transition: 0.3s ease;
 }
-
-
-
-
-
-
-
-
-
 
 .card__like-button {
   height: 38px;
@@ -264,61 +244,48 @@
   overflow: hidden;
 }
 
-
-
-
-
-.card__like-button:focus, .card__modal-button:focus {
+.card__like-button:focus,
+.card__modal-button:focus {
   outline: none;
   box-shadow: 2px 2px 0px var(--font-color);
   transition: 0.3s ease;
 }
 
-.card__like-button::before, .card__modal-button::before {
+.card__like-button::before,
+.card__modal-button::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%; 
+  left: -100%;
   width: 100%;
   height: 100%;
   color: var(--font-text);
   transition: all 0.5s ease-in-out;
 }
 
-.card__like-button:hover::before, .card__modal-button:hover::before {
+.card__like-button:hover::before,
+.card__modal-button:hover::before {
   left: 0;
   background-color: var(--font-color);
   transition: all 0.5s ease-in-out;
 }
 
-.card__like-button:hover .button__text, .card__modal-button:hover .button__text {
+.card__like-button:hover .button__text,
+.card__modal-button:hover .button__text {
   mix-blend-mode: difference;
   color: var(--button-text);
 }
-
-
-
-
-
-
 
 .button__text {
   display: flex;
   justify-content: center;
 }
 
-
-
-
-
-
-
-
 .card__modal-button {
   display: grid;
   grid-template-columns: 11% 87%;
   align-items: center;
-  margin: 45px auto 0 auto;
+  margin: 45px auto 55px auto;
   border: 2px solid var(--border);
   width: 339px;
   height: 55px;
@@ -327,41 +294,19 @@
   overflow: hidden;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .card__modal-button:hover #desk rect {
   mix-blend-mode: difference;
   fill: var(--back-color);
   transition: 0.5s ease-in-out;
 }
 
-
-
-
-
-
-
 #desk {
   fill: var(--disk);
 }
 
-
 #desk rect {
   fill: var(--disk);
 }
-
-/* #desk:hover rect {
-  fill: var(--back-color);
-} */
 
 .disk {
   margin-left: 19px;
@@ -369,14 +314,6 @@
   height: 21px;
   z-index: 0;
 }
-
-
-
-
-
-
-
-
 
 .footer__popover {
   width: 355px;
@@ -407,10 +344,6 @@
   line-height: 21px;
   font-size: 14px;
 }
-
-/* #desk use {
-  fill: var(--disk);
-} */
 
 .popover__disk {
   width: 84px;

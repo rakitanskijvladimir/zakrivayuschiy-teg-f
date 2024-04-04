@@ -54,3 +54,9 @@
       1px 0 var(--back-color), 0 -1px var(--back-color);
   }
 }
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--font-text), sans-serif;
+  }
+}
