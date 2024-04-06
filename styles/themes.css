@@ -9,11 +9,6 @@
     repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
     repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
     linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
-
-  /* repeating-linear-gradient(to right,#fff 0px 2px,transparent 2px 4px),
-    repeating-linear-gradient(to bottom, #fff 0px 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #e7e7e7, 0.01%, #1a1a1a); */
-
   --reserv-color: #ffffff;
   --back-color: #ffffff;
   --font-color: #000000;
@@ -31,13 +26,10 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --fone-gradient: repeating-linear-gradient(
-        to right,
-        #fff 0px 2px,
-        transparent 2px 4px
-      ),
-      repeating-linear-gradient(to bottom, #fff 0px 2px, transparent 2px 4px),
-      linear-gradient(to bottom, #e7e7e7, 0.01%, #1a1a1a);
+    --fone-gradient: 
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
     --reserv-color: #ffffff;
     --back-color: #ffffff;
     --font-color: #000000;
