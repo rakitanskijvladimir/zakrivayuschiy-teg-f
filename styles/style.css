@@ -13,12 +13,13 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-
-@supports ((text-stroke: 1px var(--back-color))) or
-  ((-webkit-text-stroke: 1px var(--back-color))) {
+/* Проверяем поддержку text-stroke */
+@supports (-webkit-text-stroke: 1px black) or (text-stroke: 1px black) {
+  /* Если поддерживается, сбрасываем text-shadow и применяем text-stroke */
   .label {
-    -webkit-text-stroke: 1px var(--back-color);
     text-shadow: none;
+    -webkit-text-stroke: 1px var(--back-color); /* Для Safari и других браузеров, использующих префикс -webkit */
+    text-stroke: 1px var(--back-color);
   }
 }
 
@@ -100,7 +101,6 @@
   content: "▶";
   position: absolute;
   top: 0;
-  left: 0;
   inset-inline-start: -15px;
   opacity: 0.6;
   pointer-events: none;
@@ -265,15 +265,15 @@
 .card__like-button {
   height: 38px;
   width: 130px;
-  font-family: var(--font-text), sans-serif;
-  border: 2px solid var(--border);
   text-transform: none;
-  position: relative;
-  overflow: hidden;
 }
 
 .main-button {
+  font-family: var(--font-text), sans-serif;
+  border: 2px solid var(--border);
   transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .main-button:focus {
@@ -290,11 +290,11 @@
   height: 100%;
   color: var(--font-text);
   transition: all 0.5s ease-in-out;
+  background-color: var(--font-color);
 }
 
 .main-button:hover::before {
   left: 0;
-  background-color: var(--font-color);
 }
 
 .main-button .button__text {
@@ -313,12 +313,9 @@
   align-items: center;
   margin: 45px auto 55px auto;
   background-color: var(--back-color);
-  border: 2px solid var(--border);
   width: 339px;
   height: 55px;
   text-transform: none;
-  position: relative;
-  overflow: hidden;
 }
 
 .modal-icon {
@@ -367,9 +364,6 @@
 }
 
 .card__popover-button {
-  position: relative;
-  overflow: hidden;
-  border: 2px solid var(--popover-font);
   margin-left: 23px;
   width: 258px;
   height: 37px;

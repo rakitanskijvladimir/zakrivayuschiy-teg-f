@@ -123,11 +123,11 @@
     inset-inline-start: -15px;
   }
 
-  50% {
+  100% {
     inset-inline-start: -19px;
   }
 
-  100% {
+  /* 100% {
     inset-inline-start: -15px;
-  }
+  } */
 }
