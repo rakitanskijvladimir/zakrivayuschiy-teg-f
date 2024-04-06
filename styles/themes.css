@@ -6,13 +6,6 @@
 */
 :root.theme-light {
   --fone-gradient: 
-  /* repeating-linear-gradient(
-      90deg,
-      #fff 0px 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(180deg, #fff 0px 2px, transparent 2px 4px),
-    linear-gradient(180deg, #e7e7e7, #1a1a1a, #fff); */
     repeating-linear-gradient(to right,#fff 0px 2px,transparent 2px 4px),
     repeating-linear-gradient(to bottom, #fff 0px 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7, 0.01%, #1a1a1a);
@@ -35,9 +28,6 @@
 @media (prefers-color-scheme: light) {
   :root {
     --fone-gradient: 
-    /* repeating-linear-gradient(90deg,#fff 0px 2px,transparent 2px 4px),
-      repeating-linear-gradient(180deg, #fff 0px 2px, transparent 2px 4px),
-      linear-gradient(180deg, #e7e7e7, #1a1a1a, #fff); */
       repeating-linear-gradient(to right,#fff 0px 2px,transparent 2px 4px),
       repeating-linear-gradient(to bottom, #fff 0px 2px, transparent 2px 4px),
       linear-gradient(to bottom, #e7e7e7, 0.01%, #1a1a1a);
@@ -59,9 +49,6 @@
 
 :root.theme-dark {
   --fone-gradient: 
-  /* repeating-linear-gradient(90deg,#000 0px 2px, transparent 2px 4px),
-    repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
-    linear-gradient(180deg, #007f0c, #000); */
     repeating-linear-gradient(to right,#000 0px 2px,transparent 2px 4px),
       repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
       linear-gradient(to bottom, #007f0c, #004306);
@@ -83,9 +70,6 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --fone-gradient: 
-   /* repeating-linear-gradient(90deg,#000 0px 2px, transparent 2px 4px),
-    repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
-    linear-gradient(180deg, #007f0c, #000); */
     repeating-linear-gradient(to right,#000 0px 2px,transparent 2px 4px),
       repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
       linear-gradient(to bottom, #007f0c, #004306);
